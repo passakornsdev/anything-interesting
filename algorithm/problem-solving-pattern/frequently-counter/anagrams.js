@@ -1,41 +1,28 @@
-// O(5n) = O(n)
+// O(3n) = O(n)
 const validAnagram = (firstString, secondString) => {
-    // O(4)
     if ((!firstString && firstString !== '') && (!secondString && secondString !== '')) {
         return false;
     }
-    // O(3)
     if (firstString.length !== secondString.length) {
         return false;
     }
-    // O(1)
     if (firstString === secondString) {
         return true;
     }
 
-    // O(1)
-    const firstsFreqChar = {};
+    const lookUp = {};
     // O(n)
     firstString = firstString.toLowerCase();
-    // O(1)
-    const secondFreqChar = {};
-    // O(n)
-    firstString = secondString.toLowerCase();
     // O(n)
     for (let char of firstString) {
-        // O(5)
-        firstsFreqChar[char] = (firstsFreqChar[char] || 0) + 1;
+        lookUp[char] = (lookUp[char] || 0) + 1;
     }
     // O(n)
-    for (let char of secondString) {
-        // O(5)
-        secondFreqChar[char] = (secondFreqChar[char] || 0) + 1;
-    }
-    // O(n)
-    for (const key in firstsFreqChar) {
-        // O(3)
-        if (firstsFreqChar[key] !== secondFreqChar[key]) {
+    for (const checkChar of secondString) {
+        if (!lookUp[checkChar]) {
             return false;
+        } else {
+            lookUp[checkChar] -= 1;
         }
     }
     return true;
