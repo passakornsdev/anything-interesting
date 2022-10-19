@@ -24,6 +24,19 @@ One way traversal (from head to tail)
 ### Doubly Linked List
 Two way traversal (head to tail or tail to head)
 
+### Singly Linked List VS Doubly Linked List
+#### Singly Linked List 
+less memory (no previous node pointer), so when we delete or insert it's faster but can not reversed traversal
+
+Use when we have limited memory also want a fast insertion and deletion, not much searching
+
+#### Doubly Linked List
+we can loop from head or tail
+
+but it's fairly complex and require more memory, also extra operation for insert and delete
+
+use it when we have lots of memory and when we want good perf on searching perf eg. reverse loop
+
 ### JS Pointer and Garbage Collector
 
 const pointer1 = {name: 'john', a: 'test'};
