@@ -5,13 +5,21 @@ lookup O(n) (require traversal to target node, loop)
 insert O(n) (require traversal to target node, loop)
 delete O(n) (require traversal to target node, loop)
 
-# Singly Linked List
+### Why Linked List
+#### List List vs Array
+Array is stored as group sit to next each elements so it is good when we push or pop but when it comes to insert it requires to shift all the address
+
+also when the next memory address is not available then it will be moved to next memory space which requires O(N) time
+
+Linked list is scattered data across memory space it does not require to move whole elements when next memory address is not available also it's can be sorted data compare to hash map which randomly store and can not be sorted 
+
+### Singly Linked List
 One way traversal (from head to tail)
 
-# Doubly Linked List
+### Doubly Linked List
 Two way traversal (head to tail or tail to head)
 
-# JS Pointer and Garbage Collector
+### JS Pointer and Garbage Collector
 
 const pointer1 = {name: 'john', a: 'test'};
 
