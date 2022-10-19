@@ -1,3 +1,16 @@
+# Linked List
+prepend O(1)
+append O(1)
+lookup O(n) (require traversal to target node, loop)
+insert O(n) (require traversal to target node, loop)
+delete O(n) (require traversal to target node, loop)
+
+# Singly Linked List
+One way traversal (from head to tail)
+
+# Doubly Linked List
+Two way traversal (head to tail or tail to head)
+
 # JS Pointer and Garbage Collector
 
 const pointer1 = {name: 'john', a: 'test'};
