@@ -1,9 +1,14 @@
 # Linked List
 prepend O(1)
+
 append O(1)
+
 lookup O(n) (require traversal to target node, loop)
+
 insert O(n) (require traversal to target node, loop)
+
 delete O(n) (require traversal to target node, loop)
+
 
 ### Why Linked List
 #### List List vs Array
