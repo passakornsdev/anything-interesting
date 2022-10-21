@@ -29,7 +29,7 @@ class LinkedList {
     printList() {
         const array = [];
         let currentNode = this.head;
-        while(!!currentNode) {
+        while (!!currentNode) {
             array.push(currentNode.value);
             currentNode = currentNode.next;
         }
@@ -61,35 +61,62 @@ class LinkedList {
     }
 
     remove(index) {
+        if (index === 0) {
+            this.head = this.head.next;
+        }
         const previousNode = this.traverse(index - 1);
-        if(previousNode.next && previousNode.next.next) {
-            // switch pointer, so removed node will be automatically deleted by garbage collection
-            previousNode.next = previousNode.next.next;
-        } else {
+        if (index === this.length - 1) {
             previousNode.next = null;
+            this.tail = previousNode;
+        } else {
+            previousNode.next = previousNode.next.next;
         }
         this.length--;
+        return this;
+    }
+
+    reverse() {
+        if (!this.head.next) {
+            return this;
+        }
+        let first = this.head;
+        this.tail = this.head;
+        let second = first.next;
+        while (second) {
+            const tempNode = second.next;
+            second.next = first;
+            first = second;
+            second = tempNode;
+        }
+        this.head.next = null;
+        this.head = first;
         return this;
     }
 }
 
 const myLinkedList = new LinkedList(10);
-myLinkedList.append(5);
-myLinkedList.prepend(1);
-myLinkedList.append(16);
-myLinkedList.append(11);
-myLinkedList.prepend(0);
-console.log(myLinkedList.printList());
-myLinkedList.insert(2, 2);
-myLinkedList.insert(3, 3);
-console.log(myLinkedList.printList());
+console.log(myLinkedList
+    .append(5)
+    .prepend(1)
+    .append(16)
+    .append(11)
+    .prepend(0)
+    .printList());
+console.log(myLinkedList.insert(2, 2).insert(3, 3).printList());
 console.log(myLinkedList.lookup(2));
 console.log(myLinkedList.lookup(3));
-myLinkedList.remove(2);
+console.log(myLinkedList.remove(2).printList());
+console.log(myLinkedList.remove(2).printList());
+myLinkedList.remove(5)
 console.log(myLinkedList.printList());
-myLinkedList.remove(2);
-console.log(myLinkedList.printList());
-myLinkedList.remove(5);
-console.log(myLinkedList.printList());
-console.log(myLinkedList.length);
+console.log(`reverse`);
+console.log(myLinkedList.reverse().printList());
 
+const linkedList2 = new LinkedList(1);
+console.log(linkedList2.reverse().printList());
+console.log(linkedList2.append(2).reverse().printList());
+linkedList2.reverse();
+console.log(linkedList2.append(3).reverse().printList());
+linkedList2.reverse();
+console.log(linkedList2.append(4).reverse().printList());
+console.log(linkedList2.reverse().printList());
