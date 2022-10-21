@@ -9,6 +9,7 @@ insert O(n) (require traversal to target node, loop)
 
 delete O(n) (require traversal to target node, loop)
 
+---
 
 ### Why Linked List
 #### List List vs Array
@@ -36,6 +37,8 @@ we can loop from head or tail
 but it's fairly complex and require more memory, also extra operation for insert and delete
 
 use it when we have lots of memory and when we want good perf on searching perf eg. reverse loop
+
+---
 
 ### JS Pointer and Garbage Collector
 
