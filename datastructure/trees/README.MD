@@ -50,7 +50,23 @@ No constant time operations
 
 ** the operation always log n slow compare to array/hash table but it's still good if we keep balanced BST
 
+---
 
+Use AVL Trees or Red Black Trees Algorithm to balance node, there is opensource lib to use, do not need to impl yourself
+
+##### AVL Tree 
+
+Everytime we insert node then it will traverse backward to check if tree is balanced
+
+Detail: https://medium.com/basecs/the-little-avl-tree-that-could-86a3cae410c7
+
+Animation: https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
+
+##### Red/Black Tree
+
+Detail: https://medium.com/basecs/painting-nodes-black-with-red-black-trees-60eacb2be9a5
+
+Animation: https://www.cs.usfca.edu/~galles/visualization/RedBlack.html
 
 ---
 
