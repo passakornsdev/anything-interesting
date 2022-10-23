@@ -70,6 +70,61 @@ Animation: https://www.cs.usfca.edu/~galles/visualization/RedBlack.html
 
 ---
 
+### Binary Heap
+
+Every nodes on top of them have higher value to below node, left and right can be any value below top node, less order than BST
+
+Binary Heap inserts item from left to right, and you can use array to build BH and they take lower memory then BST
+
+Why we want to use, sometimes we want to know how many node has value than 33 then we can just graps node 33
+
+Note: Memory Heap != Heap Data Structure, Memory Heap is free storage we can store arbitrary data
+
+Animation: https://visualgo.net/en/heap
+
+Lookup O(N)
+
+Insert O(log N) (We need to check every node in order to find value)
+
+Delete O(log N)
+
+
+### Priority Queue
+
+Each elements have priority so it's not always FIFO,
+
+Insert from top and then left to right also priority element can replace at the top
+
+Pros:
+
+Better than O(n)
+
+Priority (Insertion done in order, we know what to be first, second third)
+
+Flexible Size
+
+Fast Insert (For priority Element)
+
+Cons:
+
+Slow lookup (we want to use when we want to find max or min and we have method findMax/Min which is O(1))
+
+---
+
+### Trie (tr-ie)
+
+In most cases it can out-perform BST, BH, HT and most of data structures depends on type of searching
+
+Start with empty root node and have value below root nodes
+
+Example use cases we use for dictionary, searching word
+
+Benefit of this data structure is speed and space, O(length of the word)
+
+We store as, A is stored single time then link to S and R
+
+---
+
 ### O(log n)
 
 Similar to Divide and Conquer, Don't have to look to all elements just look for some elements and found result
