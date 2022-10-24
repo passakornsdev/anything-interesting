@@ -51,3 +51,17 @@ Average: O(n^2)
 Worst: O(n^2)
 
 Space: O(1)
+
+### Insertion Sort
+
+Also not efficient but some cases are very efficient
+
+When it's already sorted, the time complexity is O(n)
+
+Best: O(n) (data really small or list almost sorted)
+
+Average: O(n^2)
+
+Worst: O(n^2)
+
+Space: O(1)
