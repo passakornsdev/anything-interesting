@@ -65,3 +65,16 @@ Average: O(n^2)
 Worst: O(n^2)
 
 Space: O(1)
+
+### Merge Sort (Divide and Conquer, always give log n)
+
+One of the most efficient way to sort thing, perform better than most of sorting algorithm
+
+n log n = first n comes from we look at every items in array, log n because we don't have to compare everything to everything, just compare everything with something
+
+Best/Average/Worst: O(n log(n))
+
+space: O(n)
+
+### Quick Sort (Divide and Conquer, always give log n)
+
