@@ -78,3 +78,12 @@ space: O(n)
 
 ### Quick Sort (Divide and Conquer, always give log n)
 
+Best/Average: O(n log(n))
+
+Worst: O(n^2)
+
+Space: O(log (n)) 
+
+when the pivot is smallest or largest item then we do not split item into half, if the list pre-sorted and we pick first or last then it will take long time
+
+Ideally quick sort we should pick pivot smartly
