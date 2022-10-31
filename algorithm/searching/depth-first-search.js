@@ -43,41 +43,50 @@ class BinarySearchTree {
         return this;
     }
 
-    // Typical way to do BFS
-    breadthFirstSearch() {
-        let currentNode = this.root;
-        let list = [];
-        // this queue can get very large, memory consumption can hurt us
-        // if we have very wide tree, this queue could get really big
-        let queue = [];
-        queue.push(currentNode);
-        while (queue.length > 0) {
-            currentNode = queue.shift();
-            list.push(currentNode.value);
-            if (currentNode.left) {
-                queue.push(currentNode.left);
-            }
-            if (currentNode.right) {
-                queue.push(currentNode.right);
-            }
-        }
-        return list;
+    DFSInorder() {
+        return traverseInOrder(this.root);
     }
 
-    breadthFirstSearchR(queue, list = []) {
-        if (!queue.length) {
-            return list;
-        }
-        const currentNode = queue.shift();
-        list.push(currentNode.value);
-        if (currentNode.left) {
-            queue.push(currentNode.left);
-        }
-        if (currentNode.right) {
-            queue.push(currentNode.right);
-        }
-        return this.breadthFirstSearchR(queue, list);
+    DFSPostOrder() {
+        return traversePostOrder(this.root);
     }
+
+    DFSPreorder() {
+        return traversePreOrder(this.root);
+    }
+}
+
+function traverseInOrder(node, list = []) {
+    if (node.left) {
+        traverseInOrder(node.left, list);
+    }
+    list.push(node.value);
+    if (node.right) {
+        traverseInOrder(node.right, list);
+    }
+    return list;
+}
+
+function traversePostOrder(node, list = []) {
+    if (node.left) {
+        traversePostOrder(node.left, list);
+    }
+    if (node.right) {
+        traversePostOrder(node.right, list);
+    }
+    list.push(node.value);
+    return list;
+}
+
+function traversePreOrder(node, list = []) {
+    list.push(node.value);
+    if (node.left) {
+        traversePreOrder(node.left, list);
+    }
+    if (node.right) {
+        traversePreOrder(node.right, list);
+    }
+    return list;
 }
 
 //      9
@@ -92,5 +101,6 @@ tree.insert(20);
 tree.insert(170);
 tree.insert(15);
 tree.insert(1);
-console.log(tree.breadthFirstSearch());
-console.log(tree.breadthFirstSearchR([tree.root]));
+console.log('DFSInorder', tree.DFSInorder());
+console.log('DFSPostOrder', tree.DFSPostOrder());
+console.log('DFSPreorder', tree.DFSPreorder());

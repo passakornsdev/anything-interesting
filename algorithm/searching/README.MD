@@ -35,6 +35,16 @@ start from left branch, search down to bottom and move to nearest ancestor
 
 it uses lower memory than BFS, the idea is we want to go deepest as possible before we move to next sibling
 
+There are 3 diff way to return items
+
+//  101
+// 33 105
+
+inorder - 33, 101, 105 (from left to right)
+preorder - 101, 33, 105 (start from parent and go down to left and right, useful if we want to recreate tree)
+postorder - 33, 105, 101 (grab from bottom to top)
+
+
 Pros:
 - Less memory (than BFS)
 - Does Path Exist ?
