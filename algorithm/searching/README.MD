@@ -62,4 +62,18 @@ Cons:
   DFS [9,4,1,6,20,15,170] (go by y axis)
 ```
 
+### Graph Traversal
 
+BFS, each jumps have the same weight but sometimes we need to find shortest path on weighted node
+
+#### Dijkstra
+
+More efficient but can't accommodate negative path
+
+#### Bellman-Ford
+
+Bellman is same person who wrote dynamic programming
+
+Bellman is faster than Dijkstra because it can take negative weight
+
+Bellman can take long time to run in term of complexity, worst case is usuallt O(n^2)
