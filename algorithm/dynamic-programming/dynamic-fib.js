@@ -31,6 +31,16 @@ function fibMaster() {
     }
 }
 
+// bottom up approach
+function fibMaster2(n) {
+    let answer = [0, 1]; // prefill bottom answer
+    for (let i = 2; i <= n; i++) {
+        answer.push(answer[i - 2] + answer[i - 1]);
+    }
+    return answer.pop();
+}
+
 const fastFib = fibMaster();
 console.log('fast fib', fastFib(40));
 console.log('fast fib ops count', masterCalculationCount);
+console.log('bottom up fib', fibMaster2(40));
