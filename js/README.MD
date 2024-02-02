@@ -74,7 +74,7 @@ V8 will keep register foo function in call stack until it reaches top of call st
 
 const pointer1 = {name: 'john', a: 'test'};
 
-const pointer2 = obj1; // pointer variable, refer to pointer1SA
+const pointer2 = pointer1; // pointer variable, refer to pointer1SA
 
 pointer1.a = 'new val';
 
