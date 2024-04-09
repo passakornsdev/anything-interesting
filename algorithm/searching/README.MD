@@ -10,7 +10,7 @@ for sorted data
 
 ## Graph and Tree Traversals - O(n)
 
-Why we don't push complex data as sorted because we get because we get o(log n) search
+Why we don't push complex data as sorted because we get o(log n) search
 
 Hash table aren't ordered, not good for searching
 
