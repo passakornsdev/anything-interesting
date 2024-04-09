@@ -19,8 +19,8 @@ Input: Arr, sum length
 
 maxSubArraySumOpt([6, 2, 9, 2, 1, 8, 5, 6, 3], 3) = 19 (8 + 5 + 6)
 
-Start with sum of 2 6 9 = 17
+Start with first window [6 2 9] = 17
 
-move to next position, minus first position (6) and add next position (2)
+then move to next window [2 9 2] = 13
 
-compare which sum is greater then continue
+compare two window and keep highest and repeat until you reach the end
