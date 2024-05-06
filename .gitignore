@@ -3,3 +3,5 @@
 /.idea/encodings.xml
 /.idea/modules.xml
 /.idea/vcs.xml
+**/.idea/**
+**.class
